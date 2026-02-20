@@ -1,5 +1,6 @@
 
 import { notFound } from "next/navigation";
+import { DebugSession } from "@/components/auth/DebugSession";
 
 interface PageProps {
   params: Promise<{ tenantId: string }>;
@@ -27,6 +28,9 @@ export default async function DashboardPage({ params }: PageProps) {
             <li>Bootstrap 5 styles are loaded (Container, Buttons, Typography)</li>
             <li>TypeScript is configured correctly</li>
           </ul>
+          
+          <DebugSession />
+
           <button className="btn btn-primary btn-lg mt-3" type="button">
             <i className="bi bi-check-circle-fill me-2"></i>
             Bootstrap Button
